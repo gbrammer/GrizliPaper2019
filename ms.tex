@@ -1,0 +1,136 @@
+\documentclass[twocolumn]{aastex63}
+\usepackage{apjfonts}
+
+\usepackage{lipsum}  
+
+%\received{\today}
+%\revised{\today}
+%\accepted{\today}
+%% Command to document which AAS Journal the manuscript was submitted to.
+%% Adds "Submitted to " the argument.
+%\submitjournal{AJ}
+
+%\topmargin 0.6in
+
+\usepackage{multirow}
+
+%\usepackage{deluxetable}
+%\usepackage{color}
+%\usepackage[usenames, dvipsnames]{color}
+%\definecolor{citeRGB}{rgb}{0,0.1,0.7}
+%\usepackage[hyperfootnotes=true,naturalnames=true,letterpaper,pdfstartview=FitH,pdfpagemode=UseNone,colorlinks=true,citecolor=citeRGB]{hyperref}
+
+\gdef\HST{\textit{HST}}
+\gdef\fluxcgs{\mathrm{erg~s^{-1}~cm^{-2}}}
+\gdef\micront{$\mu$m}
+\gdef\micronm{\mu\mathrm{m}}
+\gdef\aXe{\texttt{aXe}}
+\gdef\flux_radius{\textsc{flux\_radius}}
+\gdef\epers{\textit{e}$^{-}$ s$^{-1}$}
+
+\gdef\logOH{12 + \log \left(\mathrm{O/H}\right)}
+\gdef\SFRuvir{SFR_\mathrm{UV+IR}}
+\gdef\peryr{\mathrm{yr}^{-1}}
+\gdef\kms{km\,s$^{-1}$}
+\gdef\mum{$\mu\mathrm{m}$}
+\gdef\24mum{$24\,\mu\mathrm{m}$}
+\gdef\arcsec{^{\prime\prime}}
+\gdef\UDFj{UDFj-39546284}
+\gdef\compareID{UDF-40106456}
+\gdef\Lya{\mathrm{Ly}\alpha}
+\gdef\Halpha{\mathrm{H}\alpha}
+\gdef\Hbeta{\mathrm{H}\beta}
+
+\newcommand\xxx{{\textcolor{red}{\bf xxx}}}
+\newcommand\XXX[1]{{\textcolor{red}{xxx #1}}}
+
+\gdef\HAWKI{\mbox{HAWK-I}}
+
+
+\shortauthors{Brammer et al.}
+\shorttitle{CHArGE}
+
+% \setwatermarkfontsize{50pt} 
+
+%\citestyle{aa}
+
+\begin{document}
+
+
+\title{CHArGE: The Complete Hubble Archive for Galaxy Evolution}
+
+% \footnotetext[*]{Based on observations made with the NASA/ESA \textit{Hubble
+% Space Telescope}, programs GO-11640, 12177 and 12328, obtained at the
+% Space Telescope Science Institute, which is operated by the Association of
+% Universities for Research in Astronomy, Inc., under NASA contract NAS
+% 5-26555.}
+
+\correspondingauthor{Gabriel Brammer}
+\email{gabriel.brammer@nbi.ku.dk}
+
+\author[0000-0003-2680-005X]{Gabriel Brammer}
+\affiliation{The Cosmic Dawn Center, University of Copenhagen, Vibenshuset, Lyngbyvej 2, DK-2100 Copenhagen, Denmark}
+
+\begin{abstract}
+
+
+With its high spatial resolution ($\approx 0\farcs1\,\mathrm{pix}^{-1}$) and relatively small imaging detectors, the \textit{Hubble Space Telescope} is not generally considered as a wide-area survey facility.
+
+\end{abstract}
+
+\keywords{galaxies: evolution --- galaxies: high-redshift --- surveys}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                                %
+%   Introduction
+%                                                                %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Introduction}
+\label{s:introduction}
+
+\lipsum[1-4]
+
+\begin{deluxetable*}{lr}
+\tablenum{1}
+\tablecaption{Coverage area by filter}
+\tablewidth{0pt}
+\tablehead{
+    \colhead{HST Filter} & \colhead{ Area (deg$^2$)}
+}
+
+\startdata
+F098M & 0.2 \\
+F105W & 0.8 \\
+F110W & 1.1 \\
+F125W & 1.0 \\
+F140W & 1.2 \\
+F160W & 2.5 \\
+F350LP & 0.4 \\
+F435W & 0.2 \\
+F555W & 0.1 \\
+F600LP & 0.1 \\
+F606W & 2.0 \\
+F625W & 0.2 \\
+F775W & 0.6 \\
+F814W & 2.5 \\
+F850LP & 0.7 \\
+\hline
+G102 & 0.5 \\
+G141 & 0.9 \\
+G800L & 0.6 \\
+\hline
+$\mathrm{opt} = i_{775} | i_{814} | z_{850}$   & 3.4 \\
+$Y = y_{098 } | y_{105}$                       & 1.9 \\
+$J = j_{110} | j_{125}$                        & 1.0 \\
+$H = h_{140} | h_{160}$                        & 3.1 \\
+$\mathrm{opty} = \mathrm{opt} | Y$             & 3.8 \\
+$Y-\mathrm{drop} = (\mathrm{opt} | Y) + J + H$ & 1.1 \\
+$J-\mathrm{drop} = (Y | J) + H$                & 1.7 \\
+\enddata
+\end{deluxetable*}
+
+\acknowledgments
+
+The Cosmic Dawn Center (DAWN) is funded by the Danish National Research Foundation under grant No. 140. 
+
+\end{document}
