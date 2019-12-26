@@ -46,16 +46,11 @@
 
 \gdef\HAWKI{\mbox{HAWK-I}}
 
-
 \shortauthors{Brammer et al.}
 \shorttitle{CHArGE}
-
 % \setwatermarkfontsize{50pt} 
-
 %\citestyle{aa}
-
 \begin{document}
-
 
 \title{CHArGE: The Complete Hubble Archive for Galaxy Evolution}
 
@@ -71,24 +66,56 @@
 \author[0000-0003-2680-005X]{Gabriel Brammer}
 \affiliation{The Cosmic Dawn Center, University of Copenhagen, Vibenshuset, Lyngbyvej 2, DK-2100 Copenhagen, Denmark}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%  Abstract
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{abstract}
-
 
 With its high spatial resolution ($\approx 0\farcs1\,\mathrm{pix}^{-1}$) and relatively small imaging detectors, the \textit{Hubble Space Telescope} is not generally considered as a wide-area survey facility.
 
 \end{abstract}
-
 \keywords{galaxies: evolution --- galaxies: high-redshift --- surveys}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%                                                                %
-%   Introduction
-%                                                                %
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%% Introduction
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Introduction}
 \label{s:introduction}
 
-\lipsum[1-4]
+\begin{itemize}
+    \item Imaging surveys
+    \item Grism Surveys
+    \item high-redshift selection
+\end{itemize}
+
+%\lipsum[1-4]
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%% Archival data summary
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Observations}
+\label{s:observations}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%    --- Associations
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Data associations}
+\label{s:associations}
+
+\begin{itemize}
+    \item Automatic associations
+    \url{https://github.com/gbrammer/mastquery}
+    \item By instrument / filter / visit+epoch / dispersion
+\end{itemize}
+
+\subsection{Survey summary}
+\label{s:survey}
+
+\begin{itemize}
+    \item Depth
+    \item Area
+    \item Filter coverage
+\end{itemize}
 
 \begin{deluxetable*}{lr}
 \tablenum{1}
@@ -129,8 +156,151 @@ $J-\mathrm{drop} = (Y | J) + H$                & 1.7 \\
 \enddata
 \end{deluxetable*}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%    --- External data
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{External Data}
+\label{s:external}
+
+Generally useful archival data
+
+\begin{itemize}
+    \item Spitzer 
+    \item VLT: MUSE, HAWKI
+    \item Large ground surveys like HSC, VHS, VIDEO?
+    \item ALMA?
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%  Data processing
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Data processing}
+\label{s:procesing}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%    --- Preprocessing
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Preprocessing}
+\label{s:preprocessing}
+
+Things common to both slitless and imaging: 
+\begin{itemize}
+    \item Background
+    \item Satellite trails
+    \item Asteroids (not automatic)
+    \item Data products (flc, flt)
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%    --- Imaging
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Imaging}
+\label{s:process_imaging}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%    ---.--- Imaging.Astrometry
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{Astrometry}
+\label{s:astrometry}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%    ---.--- Imaging.Mosaics
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{Mosaics}
+\label{s:mosaics}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%    ---.--- Imaging.Photometry
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{Photometry}
+\label{s:photometry}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%    --- WFSS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Slitless Spectroscopy}
+\label{s:process_slitless}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%    ---.--- Slitless.Calibration
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{Calibration}
+\label{s:slitless_calibration}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%    ---.--- Slitless.Astrometry
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{Astrometry}
+\label{s:slitless_astrometry}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%    ---.--- Slitless.Contamination
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{Contamination}
+\label{s:contamination}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%    ---.--- Slitless.Extraction
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{Spectral extraction}
+\label{s:extraction}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%    ---.--- Slitless.Redshift 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{Redshift Determination}
+\label{s:redshift}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%    ---.--- Slitless.Line Maps 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{Emission Line Maps}
+\label{s:linemaps}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%  Database
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{\textit{Spitzer} Imaging}
+\label{s:spitzer}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%  Database
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Measurement Database}
+\label{s:database}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%    --- Discussion
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Discussion}
+\label{s:discussion}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%    --- Cloud
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Data Processing in the Cloud}
+\label{s:cloud}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%  Future missions
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Future Missions}
+\label{s:future}
+
+\begin{itemize}
+    \item NIRISS
+    \item Euclid
+    \item WFIRST
+\end{itemize}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%  End things
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \acknowledgments
 
-The Cosmic Dawn Center (DAWN) is funded by the Danish National Research Foundation under grant No. 140. 
+Software acknowledgements: astropy, scipy, matplotlib, sep, astroquery, sqlalchemy, shapely
+
+\\ The Cosmic Dawn Center (DAWN) is funded by the Danish National Research Foundation under grant No. 140. 
 
 \end{document}
