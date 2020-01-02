@@ -21,6 +21,7 @@
 %\usepackage[hyperfootnotes=true,naturalnames=true,letterpaper,pdfstartview=FitH,pdfpagemode=UseNone,colorlinks=true,citecolor=citeRGB]{hyperref}
 
 \gdef\HST{\textit{HST}}
+\gdef\Spitzer{\textit{Spitzer}}
 \gdef\fluxcgs{\mathrm{erg~s^{-1}~cm^{-2}}}
 \gdef\micront{$\mu$m}
 \gdef\micronm{\mu\mathrm{m}}
@@ -42,6 +43,7 @@
 \gdef\Hbeta{\mathrm{H}\beta}
 
 \newcommand\xxx{{\textcolor{red}{\bf xxx}}}
+\newcommand\xref[1]{{\textcolor{red}{\bf (REF #1)}}}
 \newcommand\XXX[1]{{\textcolor{red}{xxx #1}}}
 
 \gdef\HAWKI{\mbox{HAWK-I}}
@@ -202,6 +204,12 @@ Things common to both slitless and imaging:
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsubsection{Astrometry}
 \label{s:astrometry}
+
+To make full use of the multi-wavelength \HST\ datasets, all images in a given filter and across filters/grisms must be aligned to a relative precision somewhat better than the instrumental pixel scales ($\lesssim 0\farcs05 = 50\,mas$).  Requirements on the absolute astrometric precision depends on the degree to which the \HST\ observations are used in consort with observations from other telescopes, such as imaging from the ground.  With relatively poor image quality from the ground the required precision is not particularly high; excellent $0\farcs5$ seeing corresponds to 5--10 \HST\ pixels.  However, the Atacama Large Millimeter Array (ALMA) can now achieve image quality better than \xxx\ mas \xref{} and with absolute astrometric precision \xxx\ mas, and the spatial comparison between stellar emission traced by \HST\ in the optical/NIR and gas and dust traced by ALMA is of paramount scientific interest in the recent literature \xref{Franco, Carlos, etc.}. Since only the target of interest (if that) is generally visible in a given ALMA map, relative alignment between \HST\ and ALMA is impossible and therefore places strong requirements on the \HST\ absolute astrometry.
+
+The absolute \textit{a priori} astrometric precision of \HST\ observations as downloaded from the MAST archive is limited by the astrometric uncertainty of guide stars in the Guide Star Catalog 2 \xref{}, which is generally \xxx\ mas and can be substantially larger for guide stars with significant but uncertain proper motions.  Repeat \HST\ observations of a given field will not necessarily even use the same guide stars, which can result in significant misalignment in both the relative and absolute sense.  The relative astrometric precision for (e.g., dithered) exposures taken within an \HST\ visit of less than a few orbits is generally \xxx\ mas.  However, intra-visit drifts of \xxx\ mas or more can occur that are not reflected in the image headers, depending on the functionality of the \HST\ gyroscopes that control and maintain pointing of the spacecraft \xref{}.  
+
+\XXX{Figure showing astrometric accuracy, from exposure\_log.product.cat.fits catalogs gaia, etc}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%    ---.--- Imaging.Mosaics
